@@ -1,7 +1,26 @@
 <?php
 echo "Bài 10 <br>";
 
-$km = 7;
+$km = 0;
+if (isset($_POST['km'])) {
+    $km = $_POST['km'];
+}
+?>
+
+<form action="#" method="post">
+    <table>
+        <tr>
+            <td>Nhập giá trị km:</td>
+            <td><input type="text" name="km" value="<?= $km ?>" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Kết quả"></td>
+        </tr>
+    </table>
+</form>
+<?php
+
 $money = 0;
 
 if ($km == 1) {
