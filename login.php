@@ -1,6 +1,5 @@
 <?php
-
-$conn = mysqli_connect('localhost', 'root', '', 'list') or die('Connect fail');
+$conn = mysqli_connect('remotemysql.com', 'HOmIeyfXK6', 'tXQOS2PF2N', 'HOmIeyfXK6') or die('Connect fail');
 mysqli_set_charset($conn, 'UTF8');
 session_start();
 if (isset($_SESSION['name'])) {
