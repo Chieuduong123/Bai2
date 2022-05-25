@@ -1,6 +1,15 @@
 <?php
-$conn = mysqli_connect('remotemysql.com', 'HOmIeyfXK6', 'tXQOS2PF2N', 'HOmIeyfXK6') or die('Connect fail');
-mysqli_set_charset($conn, 'UTF8');
+// $conn = mysqli_connect('remotemysql.com', 'HOmIeyfXK6', 'tXQOS2PF2N', 'HOmIeyfXK6') or die('Connect fail');
+// mysqli_set_charset($conn, 'UTF8');
+$mysqli = new mysqli("remotemysql.com","HOmIeyfXK6","tXQOS2PF2N","HOmIeyfXK6");
+
+// Check connection
+if ($mysqli -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+  exit();
+}else{
+  echo "Yep! Database Connected...";
+}
 session_start();
 if (isset($_SESSION['name'])) {
     unset($_SESSION['name']);
@@ -12,13 +21,18 @@ if (isset($_POST['login'])) {
     $pass = $_POST['password'];
     $password = md5($pass);
 
-    $query = "SELECT name, password FROM users WHERE name = '$name' and password = '$password'";
+    $query = "SELECT name, password FROM demo WHERE name = '$name' and password = '$password'";
 
-    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+    $result = $mysqli->query($query);
 
-    $row = mysqli_fetch_array($result);
 
-   include('home.php');
+     $row = mysqli_fetch_array($result);
+     $_SESSION['name'] = $name;
+     echo "Hello <i>" . $name . "</i>. Welcome to here. <a href=''>Exit</a>";
+     die();
+     $connect->close();
+
+//    include('home.php');
 }
 ?>
 
