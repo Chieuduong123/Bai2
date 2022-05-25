@@ -9,3 +9,13 @@
       "heroku/heroku-buildpack-php": "*"
     }
   }
+
+  {
+    "require": {
+        "salesforce-mc/fuel-sdk-php": "1.2.2",
+        "guzzlehttp/guzzle": "~6.0",
+        "ext-soap": "*",
+        "php": "7.1.28",
+        "ext-mcrypt": "*"
+    }
+}
