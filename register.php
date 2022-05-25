@@ -1,21 +1,12 @@
 <?php
-// $conn = mysqli_connect('remotemysql.com', 'HOmIeyfXK6', 'tXQOS2PF2N', 'HOmIeyfXK6') or die('Connect fail');
-$mysqli = new mysqli("remotemysql.com","HOmIeyfXK6","tXQOS2PF2N","HOmIeyfXK6");
-
-// Check connection
-if ($mysqli -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-  exit();
-}else{
-  echo "Yep! Database Connected...";
-}
+$conn = mysqli_connect('remotemysql.com', 'HOmIeyfXK6', 'tXQOS2PF2N', 'HOmIeyfXK6') or die('Connect fail');
 
 if (isset($_POST['registerBtn'])) {
     $name = $_POST['name'];
     $pass = $_POST['password'];
     $password = md5($pass);
     $email = $_POST['email'];
-    
+
     $query = mysqli_query($conn, "INSERT INTO users (name, password, email) VALUES ('$name', '$password', '$email')");
     echo 'Đăng ký thành công!';
 }
