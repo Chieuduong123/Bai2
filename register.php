@@ -1,5 +1,6 @@
 <?php
 $conn = mysqli_connect('remotemysql.com', 'HOmIeyfXK6', 'tXQOS2PF2N', 'HOmIeyfXK6') or die('Connect fail');
+mysqli_set_charset($conn, 'UTF8');
 
 if (isset($_POST['registerBtn'])) {
     $name = $_POST['name'];
