@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('ec2-52-86-115-245.compute-1.amazonaws.com', 'akebfzmfhsaguw', '520bc516ece2f6a521c0e2abf3060b153df382114156477d64a2ba56630aeaf1', 'dcotvmj72tgmke') or die('Connect fail');
+$conn = mysqli_connect('remotemysql.com', 'HOmIeyfXK6', 'tXQOS2PF2N', 'HOmIeyfXK6') or die('Connect fail');
 
 if (isset($_POST['registerBtn'])) {
     $name = $_POST['name'];
