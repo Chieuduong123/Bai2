@@ -27,7 +27,7 @@ if (isset($_POST['register'])) {
         die();
     } else {
         $sql = "INSERT INTO students (username, password, email) VALUES ('$username','$password','$email')";
-        echo '<script language="javascript">alert("Đăng ký thành công!"); window.location="register.php";</script>';
+        echo '<script language="javascript">alert("Đăng ký thành công!"); window.location="login.php";</script>';
 
         mysqli_query($conn, $sql);
 }
