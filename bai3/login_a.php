@@ -21,8 +21,6 @@ if (isset($_POST['login']))
         echo "Mật khẩu không đúng. Vui lòng nhập lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
         exit;
     }
-    $_SESSION['name'] = $name;
-    echo "Xin chào " . $name . ". Bạn đã đăng nhập thành công</a>";
-    die();
+    include('home.php');
 }
 ?>
