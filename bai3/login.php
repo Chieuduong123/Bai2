@@ -15,7 +15,7 @@
             <h1>Login</h1>
             <div class="content">
                 <div class="input-field">
-                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="username" placeholder="Name">
                 </div>
                 <div class="input-field">
                     <input type="password" name="password" placeholder="Password">

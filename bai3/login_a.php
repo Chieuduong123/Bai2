@@ -4,14 +4,14 @@ header('Content-Type: text/html; charset=UTF-8');
 if (isset($_POST['login'])) 
 {
     include('database.php');
-    $name = addslashes($_POST['name']);
+    $username = addslashes($_POST['username']);
     $password = $_POST['password'];
-    if (!$name || !$password) {
+    if (!$username || !$password) {
         echo "Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu. <a href='javascript: history.go(-1)'>Trở lại</a>";
         exit;
     }
      
-    $query = "SELECT name, password FROM users WHERE name = '$name' and password = '$password'";
+    $query = "SELECT username, password FROM members WHERE username = '$username' and password = '$password'";
 
     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
      
@@ -21,6 +21,8 @@ if (isset($_POST['login']))
         echo "Mật khẩu không đúng. Vui lòng nhập lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
         exit;
     }
-    include('home.php');
+    $_SESSION['username'] = $username;
+    echo "Xin chào " . $username . ". Bạn đã đăng nhập thành công</a>";
+    die();
 }
 ?>

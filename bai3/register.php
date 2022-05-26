@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Register</title>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
     <link rel="stylesheet" href="style.css">
 
@@ -15,17 +15,17 @@
             <h1>Register</h1>
             <div class="content">
                 <div class="input-field">
-                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="username" placeholder="Name" required>
                 </div>
                 <div class="input-field">
-                    <input type="email" name="email" placeholder="Email">
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="input-field">
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
             </div>
             <div class="action">
-                <button type="submit" class="btn" name="registerBtn">Register</button>
+                <button type="submit" class="btn" name="register">Register</button>
             </div>
         </form>
     </div>
