@@ -14,8 +14,8 @@
     <h1 style="text-align:center ;">HOME PAGE</h1><br><br>
     <h2 style="text-align:center ;">
         <?php
-        $_SESSION['name'] = $name;
-        echo "Hello <i>" . $name . "</i>. Welcome to here. <a href=''>Exit</a>";
+        $_SESSION['name'] = $username;
+        echo "Hello <i>" . $username . "</i>. Welcome to here. <a href=''>Exit</a>";
         die();
         $connect->close();
         ?>
