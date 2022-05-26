@@ -17,7 +17,7 @@ if (isset($_POST['register'])) {
         array_push($errors, "Two password do not match");
     }
 
-    $sql = "SELECT * FROM members WHERE username = '$username' OR email = '$email'";
+    $sql = "SELECT * FROM students WHERE username = '$username' OR email = '$email'";
 
     $result = mysqli_query($conn, $sql);
 
@@ -26,7 +26,7 @@ if (isset($_POST['register'])) {
 
         die();
     } else {
-        $sql = "INSERT INTO members (username, password, email) VALUES ('$username','$password','$email')";
+        $sql = "INSERT INTO students (username, password, email) VALUES ('$username','$password','$email')";
         echo '<script language="javascript">alert("Đăng ký thành công!"); window.location="register.php";</script>';
 
         mysqli_query($conn, $sql);

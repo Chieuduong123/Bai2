@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
         exit;
     }
 
-    $query = "SELECT username, password FROM members WHERE username = '$username' and password = '$password'";
+    $query = "SELECT username, password FROM students WHERE username = '$username' and password = '$password'";
 
     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
