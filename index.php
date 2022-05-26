@@ -23,8 +23,8 @@
     <a href="bai9.php">Bài 9</a>
     <a href="bai10.php">Bài 10</a></h2><br><br>
     <h1 style="text-align:center ;">Bài 3</h1><br><br><br>
-    <h2 style="text-align:center ;"> <a href="login.php">Login</a> </h2><br><br>
-    <h2 style="text-align:center ;"> <a href="register.php">Register</a> </h2>
+    <h2 style="text-align:center ;"> <a href="bai3/login.php">Login</a> </h2><br><br>
+    <h2 style="text-align:center ;"> <a href="bai3/register.php">Register</a> </h2>
 </body>
 
 </html>
